@@ -1,0 +1,30 @@
+Corneal Gem Github: Sintra App Generator https://github.com/thebrianemory/corneal
+
+What is R.E.S.T? ~ Representational State Transfer
+
+C. R. U. D
+
+HTTP Verbs ~ GET | POST | PATCH/PUT | DELETE
+
+ROUTES (7 Restful Routes for CRUD functionality)
+HTTP Verbs  | Route       | CRUD ~ what's happening in block
+GET         /todos            Read from table ~ index
+GET         /todos/:id        Read from table ~ show
+GET         /todos/new        displaying a form ~
+POST        /todos            Create a new obj
+GET         /todos/:id/edit   displaying a form
+PATCH/PUT   /todos/:id        Update an obj
+DELETE      /todos/:id        Delete obj from table
+
+MVC
+Model
+- Logic ~ communication w/your table
+
+View
+- The frontend, the display of info
+
+Controller (where routes are defined)
+- Accept web request from client
+- Interacts with the Model & the View
+- Getting/Posting/Updating/Deleting info from a table
+- Take the response and display info in the view ~ AKA 'render' info
