@@ -1,4 +1,5 @@
-# erb = embedded ruby
-<% # erb = embedded ruby %>
-
 <h1>Todo Index Page </h1>
+
+<% @todos.each do |todo_obj| %>
+  <p><%= todo_obj[:content] %></p>
+<% end %>
