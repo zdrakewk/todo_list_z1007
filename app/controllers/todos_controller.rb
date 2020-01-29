@@ -48,6 +48,8 @@ class TodosController < ApplicationController
     # binding.pry
     updated_todo = Todo.find_by_id(params[:id])
     # updated_todo.update(params)
+
+    # can't just pass in parmas to update method, b/c name '_method' is found in the params & AR will try and set that attribute value, which is a value in the table
     updated_todo.update(
       content: params[:content],
       complete: params[:complete]
