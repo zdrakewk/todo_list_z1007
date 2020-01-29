@@ -43,13 +43,15 @@ class TodosController < ApplicationController
   end
   
   # update route, updated the obj info from form data 
-  post '/todos/:id' do
+  # post '/todos/:id' do
+  patch '/todos/:id' do
+    # binding.pry
     updated_todo = Todo.find_by_id(params[:id])
-    updated_todo.update(params)
-    # updated_todo.update(
-    #   content: params[:content],
-    #   complete: params[:complete]
-    # )
+    # updated_todo.update(params)
+    updated_todo.update(
+      content: params[:content],
+      complete: params[:complete]
+    )
 
     # updated_todo.content = params[:content]
     # updated_todo.complete = params[:complete]

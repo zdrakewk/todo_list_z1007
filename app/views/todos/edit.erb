@@ -2,6 +2,8 @@
 
 <%# action attr tells your form what route to send form data too%>
 <form action="/todos/<%= @todo.id%>" method='post'>
+<input type='hidden' id='hidden' name='_method' value='patch'>
+
 Add todo Content: <input type='text' name='content' value="<%= @todo.content %>" placeholder='add content here'> <br/>
 
 Check box if ToDo has been completed: 
