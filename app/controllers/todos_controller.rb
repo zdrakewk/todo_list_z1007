@@ -35,4 +35,32 @@ class TodosController < ApplicationController
     @todo = Todo.find_by_id(params[:id])
     erb :'todos/show'
   end 
+
+  # edit route, display a form to create a edit todo obj
+  get '/todos/:id/edit' do
+    @todo = Todo.find_by_id(params[:id])
+    erb :'todos/edit'
+  end
+  
+  # update route, updated the obj info from form data 
+  post '/todos/:id' do
+    updated_todo = Todo.find_by_id(params[:id])
+    updated_todo.update(params)
+    # updated_todo.update(
+    #   content: params[:content],
+    #   complete: params[:complete]
+    # )
+
+    # updated_todo.content = params[:content]
+    # updated_todo.complete = params[:complete]
+    # updated_todo.save
+
+    redirect "/todos/#{updated_todo.id}"
+  end  
+  
+  delete '/todos/:id/delete' do
+    @deleteTodo = Todo.find_by_id(params[:id])
+    @deleteTodo.delete
+    redirect '/todos'
+  end
 end

@@ -1,0 +1,25 @@
+<h1>Edit your Todo Here </h1>
+
+<%# action attr tells your form what route to send form data too%>
+<form action="/todos/<%= @todo.id%>" method='post'>
+Add todo Content: <input type='text' name='content' value="<%= @todo.content %>" placeholder='add content here'> <br/>
+
+Check box if ToDo has been completed: 
+<% if @todo.complete == true %>
+  <input 
+    type='checkbox' 
+    name='complete' 
+    value='true'
+    checked
+  /> 
+<% else %>
+  <input 
+    type='checkbox' 
+    name='complete' 
+    value='true'
+  /> 
+<% end %>
+<br/>
+<input type='submit' value='Edit a Todo'>
+
+</form>

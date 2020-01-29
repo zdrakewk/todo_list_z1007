@@ -2,3 +2,8 @@
 
 ToDo's Content is: <%= @todo.content %><br/>
 This Todo is completed? <%= @todo.complete %>
+
+<form action="/todos/<%= @todo.id %>/delete" method='post'>
+<input type='hidden' id='hidden' name='_method' value='delete'>
+<input type='submit' value='Delete Todo'>
+</form>
