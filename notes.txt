@@ -28,3 +28,7 @@ Controller (where routes are defined)
 - Interacts with the Model & the View
 - Getting/Posting/Updating/Deleting info from a table
 - Take the response and display info in the view ~ AKA 'render' info
+
+
+HTTP
+Hypert Text Transfer Proc

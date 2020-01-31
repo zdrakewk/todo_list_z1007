@@ -1,0 +1,1 @@
+User.create(username: 'u1', password: 'test')
